@@ -1,0 +1,354 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.header .leftNav {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  gap: 2rem;
+}
+.header .leftNav .youtubeLogo {
+  height: 25px;
+  margin-left: 3px;
+}
+.header .leftNav .leftNav__menu {
+  height: 40px;
+}
+.header .searchBar {
+  display: flex;
+  flex-grow: 1;
+  margin: 0 2rem 0 4rem;
+  align-items: center;
+}
+.header .searchBar .searchBar__input {
+  width: 100%;
+  font-size: inherit;
+  padding: 0.4rem;
+  border: solid 1px #d1d0d0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.header .searchBar .searchBar__btn {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  border: solid 1px #d1d0d0;
+  background-color: #f8f8f8;
+  border-left: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.header .searchBar .searchBar__btn:hover {
+  background-color: #f0f0f0;
+}
+.header .searchBar .searchBar__btn img {
+  height: 30px;
+}
+.header .menuIcon {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  gap: 1rem;
+}
+.header .menuIcon .menuIcon__img {
+  height: 40px;
+  cursor: pointer;
+}
+.header .menuIcon .myAccount {
+  background-color: #aaa;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-areas: "aside category" "aside videos";
+  grid-template-rows: 5rem auto;
+  grid-template-columns: 6rem auto;
+}
+.wrapper .categories {
+  padding: 1rem 2rem;
+  border-top: solid 1px #999;
+  border-bottom: solid 1px #999;
+  overflow: hidden;
+  grid-area: category;
+  background-color: white;
+  z-index: 0;
+}
+.wrapper .categories .categories__section {
+  display: flex;
+  align-items: center;
+}
+.wrapper .categories .categories__section .category {
+  margin-right: 1rem;
+  white-space: nowrap;
+  border: solid 1px #ccc;
+  border-radius: 900px;
+  background-color: #ccc;
+  padding: 0.5rem 1rem;
+  font-size: inherit;
+  cursor: pointer;
+  transition: background-color 150ms;
+}
+.wrapper .categories .categories__section .category:hover {
+  background-color: #ddd;
+}
+.wrapper .categories .categories__section .category.active {
+  background-color: black;
+  color: white;
+  border-color: #ccc;
+}
+.wrapper .aside {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: none;
+  align-items: center;
+  gap: 0px;
+  grid-area: aside;
+  transition: background-color 150ms;
+}
+.wrapper .aside .aside__menu {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  padding: 22px;
+}
+.wrapper .aside .aside__menu:hover {
+  background-color: #ccc;
+}
+.wrapper .videos {
+  background-color: #f1f1f1;
+  grid-area: videos;
+}
+.wrapper .videos .videos__section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  align-items: normal;
+  gap: 3rem 1rem;
+  padding: 3rem 0;
+  margin: 0 1.5rem;
+  border-top: solid 4px #ccc;
+}
+.wrapper .videos .videos__section:first-child {
+  border-top: none;
+}
+.wrapper .videos .videos__section .videos__container {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: none;
+  align-items: normal;
+  gap: 0px;
+}
+.wrapper .videos .videos__section .videos__container .thumbnail {
+  position: relative;
+  display: flex;
+}
+.wrapper .videos .videos__section .videos__container .thumbnail::before {
+  content: attr(data-duration);
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  right: 5px;
+  bottom: 5px;
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
+  font-size: 0.9rem;
+}
+.wrapper .videos .videos__section .videos__container .thumbnail .thumbnail__image {
+  height: 100%;
+  width: 100%;
+  min-height: 250px;
+  min-width: 250px;
+  background-color: #aaa;
+}
+.wrapper .videos .videos__section .videos__container .videos__bottomSection {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.wrapper .videos .videos__section .videos__container .videos__bottomSection .channelIcon {
+  margin-right: 0.75em;
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+  background-color: #aaa;
+}
+.wrapper .videos .videos__section .videos__container .videos__bottomSection .videos__details {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: none;
+  align-items: normal;
+  gap: 0px;
+}
+.wrapper .videos .videos__section .videos__container .videos__bottomSection .videos__details .videos__details__title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+.wrapper .videos .videos__section .videos__container .videos__bottomSection .videos__details .videos__details__channelName {
+  margin-bottom: 0.1rem;
+  text-decoration: none;
+  transition: color 150ms;
+}
+.wrapper .videos .videos__section .videos__container .videos__bottomSection .videos__details .videos__details__title,
+.wrapper .videos .videos__section .videos__container .videos__bottomSection .videos__details .videos__details__channelName {
+  color: black;
+}
+
+@media screen and (max-width: 360px) and (min-width: 110px) {
+  .header {
+    padding: 0.8rem;
+    padding: 0.3rem;
+  }
+  .header .leftNav {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .header .leftNav .leftNav__menu {
+    height: 20px;
+  }
+  .header .leftNav .youtubeLogo {
+    height: 14px;
+    margin-left: 3px;
+  }
+  .header .searchBar {
+    margin: 0 0.2rem 0 0.4rem;
+  }
+  .header .searchBar .searchBar__mic {
+    height: 14px;
+  }
+  .header .searchBar .searchBar__input {
+    width: 100%;
+    font-size: 11px;
+    padding: 0.1rem;
+  }
+  .header .searchBar .searchBar__btn {
+    padding: 0 0.3rem;
+    margin-right: 0.1rem;
+  }
+  .header .searchBar .searchBar__btn img {
+    height: 15px;
+  }
+  .header .menuIcon {
+    gap: 0.1rem;
+  }
+  .header .menuIcon .menuIcon__img {
+    height: 15px;
+    cursor: pointer;
+  }
+
+  .wrapper {
+    grid-template-rows: 3rem auto;
+    grid-template-columns: 3rem auto;
+  }
+  .wrapper .categories {
+    padding: 0;
+  }
+  .wrapper .categories .categories__section .category {
+    margin-right: 0.2rem;
+    padding: 0.2rem 0.1rem;
+    font-size: 12px;
+  }
+  .wrapper .aside {
+    font-size: 12px;
+    gap: 0px;
+  }
+  .wrapper .aside .aside__menu {
+    padding: 15px 0;
+  }
+  .wrapper .aside img {
+    height: 25px;
+  }
+  .wrapper .videos .videos__section {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    padding: 0.7rem 0;
+    margin: 0 0.7rem;
+    font-size: 13px;
+  }
+  .wrapper .videos .videos__section .videos__details__title {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 360px) {
+  .header {
+    padding: 0.8rem;
+    padding: 0.3rem;
+  }
+  .header .leftNav {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .header .leftNav .leftNav__menu {
+    height: 30px;
+  }
+  .header .leftNav .youtubeLogo {
+    height: 20px;
+    margin-left: 3px;
+  }
+  .header .searchBar {
+    margin: 0 1rem 0 1rem;
+  }
+  .header .searchBar .searchBar__mic {
+    height: 24px;
+  }
+  .header .searchBar .searchBar__input {
+    width: 100%;
+    font-size: 15px;
+    padding: 0.1rem;
+  }
+  .header .searchBar .searchBar__btn {
+    padding: 0 0.3rem;
+    margin-right: 0.1rem;
+  }
+  .header .searchBar .searchBar__btn img {
+    height: 20px;
+  }
+  .header .menuIcon {
+    gap: 0.1rem;
+  }
+  .header .menuIcon .menuIcon__img {
+    height: 25px;
+    cursor: pointer;
+  }
+
+  .wrapper {
+    grid-template-rows: 3rem auto;
+    grid-template-columns: 3rem auto;
+  }
+  .wrapper .categories {
+    padding: 0;
+  }
+  .wrapper .categories .categories__section .category {
+    margin-right: 0.2rem;
+    padding: 0.5rem 0.4rem;
+    font-size: 12px;
+  }
+  .wrapper .aside {
+    font-size: 14px;
+    gap: 0px;
+  }
+  .wrapper .aside .aside__menu {
+    padding: 15px 0;
+  }
+  .wrapper .aside img {
+    height: 30px;
+  }
+  .wrapper .videos .videos__section {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 0.7rem 0;
+    margin: 0 0.7rem;
+    font-size: 13px;
+  }
+  .wrapper .videos .videos__section .videos__details__title {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

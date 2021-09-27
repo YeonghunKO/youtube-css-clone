@@ -1,0 +1,415 @@
+@import '_mixins';
+@import '_variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  .leftNav {
+    @include display(
+      grid,
+      $columns: repeat(2, auto),
+      $align: center,
+      $gap: 2rem
+    );
+    .youtubeLogo {
+      height: 25px;
+      margin-left: 3px;
+    }
+
+    .leftNav__menu {
+      height: 40px;
+    }
+  }
+
+  .searchBar {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 2rem 0 4rem;
+    align-items: center;
+
+    .searchBar__input {
+      width: 100%;
+      font-size: inherit;
+      padding: 0.4rem;
+
+      @include borderColor(border, $color: $searchBarBorderColor);
+      @include searchBarBorderRadius;
+    }
+
+    .searchBar__btn {
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      @include borderColor(border, $searchBarBorderColor);
+      background-color: #f8f8f8;
+      border-left: none;
+      @include searchBarBorderRadius;
+      cursor: pointer;
+      margin-right: 1rem;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+      img {
+        height: 30px;
+      }
+    }
+  }
+
+  .menuIcon {
+    @include display(
+      grid,
+      $columns: repeat(4, auto),
+      $align: center,
+      $gap: 1rem
+    );
+
+    .menuIcon__img {
+      height: 40px;
+      cursor: pointer;
+    }
+
+    .myAccount {
+      background-color: $skeletonColor;
+    }
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    'aside category'
+    'aside videos';
+  grid-template-rows: 5rem auto;
+  grid-template-columns: 6rem auto;
+
+  .categories {
+    padding: 1rem 2rem;
+    @include borderColor(border-top, $categoriesBorderColor);
+    @include borderColor(border-bottom, $categoriesBorderColor);
+    overflow: hidden;
+    grid-area: category;
+    background-color: white;
+    z-index: 0;
+
+    .categories__section {
+      display: flex;
+      align-items: center;
+
+      .category {
+        margin-right: 1rem;
+        white-space: nowrap;
+        @include borderColor(border, $categoryBackgroungColor);
+        border-radius: 900px;
+        background-color: $categoryBackgroungColor;
+        padding: 0.5rem 1rem;
+        font-size: inherit;
+        cursor: pointer;
+        @include transition(background-color, 150ms);
+
+        &:hover {
+          background-color: #ddd;
+        }
+
+        &.active {
+          background-color: black;
+          color: white;
+          border-color: $categoryBackgroungColor;
+        }
+      }
+    }
+  }
+  .aside {
+    @include display(flex, $align: center);
+    grid-area: aside;
+    transition: background-color 150ms;
+
+    .aside__menu {
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      color: black;
+      padding: 22px;
+
+      &:hover {
+        background-color: $categoryBackgroungColor;
+      }
+    }
+  }
+
+  .videos {
+    background-color: rgb(241, 241, 241);
+    grid-area: videos;
+
+    .videos__section {
+      @include display(
+        grid,
+        $columns: repeat(auto-fill, minmax(250px, 1fr)),
+        $gap: 3rem 1rem
+      );
+
+      padding: 3rem 0;
+      margin: 0 1.5rem;
+
+      @include borderColor(border-top, $categoryBackgroungColor, 4px);
+
+      &:first-child {
+        border-top: none;
+      }
+
+      .videos__container {
+        @include display(flex);
+        .thumbnail {
+          position: relative;
+          display: flex;
+
+          &::before {
+            content: attr(data-duration);
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.85);
+            color: white;
+            right: 5px;
+            bottom: 5px;
+            padding: 0.1em 0.3em;
+            border-radius: 0.3em;
+            font-size: 0.9rem;
+          }
+
+          .thumbnail__image {
+            @include heightWidth($min: false, $height: 100%, $width: 100%);
+            @include heightWidth($min: true, $height: 250px, $width: 250px);
+            background-color: $skeletonColor;
+          }
+        }
+
+        .videos__bottomSection {
+          display: flex;
+          align-items: center;
+          margin-top: 1rem;
+
+          .channelIcon {
+            margin-right: 0.75em;
+            border-radius: 50%;
+            @include heightWidth($min: false, $height: 36px, $width: 36px);
+            background-color: $skeletonColor;
+          }
+
+          .videos__details {
+            @include display(flex);
+
+            .videos__details__title {
+              font-size: 1.1rem;
+              font-weight: bold;
+              margin-bottom: 0.5rem;
+              text-decoration: none;
+            }
+
+            .videos__details__channelName {
+              margin-bottom: 0.1rem;
+              text-decoration: none;
+              @include transition(color, 150ms);
+            }
+
+            .videos__details__title,
+            .videos__details__channelName {
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// media query setting - mobile
+@include respond($breakPoint: mobile) {
+  .header {
+    padding: 0.8rem;
+    padding: 0.3rem;
+
+    .leftNav {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+
+      .leftNav__menu {
+        height: 20px;
+      }
+
+      .youtubeLogo {
+        height: 14px;
+        margin-left: 3px;
+      }
+    }
+
+    .searchBar {
+      margin: 0 0.2rem 0 0.4rem;
+
+      .searchBar__mic {
+        height: 14px;
+      }
+
+      .searchBar__input {
+        width: 100%;
+        font-size: 11px;
+        padding: 0.1rem;
+      }
+
+      .searchBar__btn {
+        padding: 0 0.3rem;
+        margin-right: 0.1rem;
+
+        img {
+          height: 15px;
+        }
+      }
+    }
+
+    .menuIcon {
+      gap: 0.1rem;
+
+      .menuIcon__img {
+        height: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .wrapper {
+    grid-template-rows: 3rem auto;
+    grid-template-columns: 3rem auto;
+
+    .categories {
+      padding: 0;
+
+      .categories__section .category {
+        margin-right: 0.2rem;
+
+        padding: 0.2rem 0.1rem;
+        font-size: 12px;
+      }
+    }
+
+    .aside {
+      font-size: 12px;
+      gap: 0px;
+
+      .aside__menu {
+        padding: 15px 0;
+      }
+
+      img {
+        height: 25px;
+      }
+    }
+
+    .videos .videos__section {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      padding: 0.7rem 0;
+      margin: 0 0.7rem;
+      font-size: 13px;
+
+      .videos__details__title {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// media query setting - mobile
+@include respond($breakPoint: tablet) {
+  .header {
+    padding: 0.8rem;
+    padding: 0.3rem;
+
+    .leftNav {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+
+      .leftNav__menu {
+        height: 30px;
+      }
+
+      .youtubeLogo {
+        height: 20px;
+        margin-left: 3px;
+      }
+    }
+
+    .searchBar {
+      margin: 0 1rem 0 1rem;
+
+      .searchBar__mic {
+        height: 24px;
+      }
+
+      .searchBar__input {
+        width: 100%;
+        font-size: 15px;
+        padding: 0.1rem;
+      }
+
+      .searchBar__btn {
+        padding: 0 0.3rem;
+        margin-right: 0.1rem;
+
+        img {
+          height: 20px;
+        }
+      }
+    }
+
+    .menuIcon {
+      gap: 0.1rem;
+
+      .menuIcon__img {
+        height: 25px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .wrapper {
+    grid-template-rows: 3rem auto;
+    grid-template-columns: 3rem auto;
+
+    .categories {
+      padding: 0;
+
+      .categories__section .category {
+        margin-right: 0.2rem;
+
+        padding: 0.5rem 0.4rem;
+        font-size: 12px;
+      }
+    }
+
+    .aside {
+      font-size: 14px;
+      gap: 0px;
+
+      .aside__menu {
+        padding: 15px 0;
+      }
+
+      img {
+        height: 30px;
+      }
+    }
+
+    .videos .videos__section {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      padding: 0.7rem 0;
+      margin: 0 0.7rem;
+      font-size: 13px;
+
+      .videos__details__title {
+        font-size: 1rem;
+      }
+    }
+  }
+}

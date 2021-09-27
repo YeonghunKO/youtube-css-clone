@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <title>youtube-clone</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="leftNav">
+        <a href="#">
+          <img class="leftNav__menu" src="./img/menu.png" alt="menu" />
+        </a>
+        <a href="#">
+          <img class="youtubeLogo" src="./img/logo.png" alt="youtube logo" />
+        </a>
+      </div>
+      <form class="searchBar">
+        <input
+          type="search"
+          placeholder="검색"
+          class="searchBar__input"
+          aria-label="Search"
+        />
+        <button type="submit" class="searchBar__btn">
+          <img src="./img/magnify.svg" alt="search btn" />
+        </button>
+        <img class="searchBar__mic" src="./img/mic.png" alt="mic" />
+      </form>
+      <div class="menuIcon">
+        <a href="#">
+          <img
+            class="menuIcon__img"
+            src="./img/video-plus.svg"
+            alt="uploadViedo"
+          />
+        </a>
+        <a href="#">
+          <img class="menuIcon__img" src="./img/apps.svg" alt="" />
+        </a>
+        <a href="#">
+          <img class="menuIcon__img" src="./img/bell.svg" alt="" />
+        </a>
+        <a href="#">
+          <img
+            class="menuIcon__img"
+            class="myAccount"
+            src="./img/my_account.png"
+            alt=""
+          />
+        </a>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="categories">
+        <section class="categories__section">
+          <button class="category active">전체</button>
+          <button class="category">카테고리</button>
+          <button class="category">카테고리</button>
+          <button class="category">카테고리</button>
+          <button class="category">카테고리</button>
+          <button class="category">카테고리</button>
+          <button class="category">카테고리</button>
+          <button class="category">카테고리</button>
+          <button class="category">카테고리</button>
+          <button class="category">카테고리</button>
+          <button class="category">카테고리</button>
+          <button class="category">카테고리</button>
+          <button class="category">카테고리</button>
+          <button class="category">카테고리</button>
+          <button class="category">카테고리</button>
+          <button class="category">카테고리</button>
+          <button class="category">카테고리</button>
+          <button class="category">카테고리</button>
+          <button class="category">카테고리</button>
+          <a href="#">
+            <img class="categories__arrow" src="./img/arrow.png" alt="arrow" />
+          </a>
+        </section>
+      </div>
+      <aside class="aside">
+        <a class="aside__menu" href="#">
+          <img src="./img/home.png" alt="" />
+          <div>홈</div>
+        </a>
+        <a class="aside__menu" href="#">
+          <img src="./img/explore.png" alt="" />
+          <div>탐색</div>
+        </a>
+        <a class="aside__menu" href="#">
+          <img src="./img/video_lib.png" alt="" />
+          <div>구독</div>
+        </a>
+        <a class="aside__menu" href="#">
+          <img src="./img/video_lib.png" alt="" />
+          <div>보관함</div>
+        </a>
+      </aside>
+      <div class="videos">
+        <section class="videos__section">
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="videos__section">
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="videos__section">
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="videos__section">
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="videos__section">
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="videos__container">
+            <a href="#" class="thumbnail" data-duration="12:24">
+              <img
+                class="thumbnail__image"
+                src="http://unsplash.it/250/150?gravity=center"
+                alt="thumbnail"
+              />
+            </a>
+            <div class="videos__bottomSection">
+              <a href="#">
+                <img
+                  class="channelIcon"
+                  src="http://unsplash.it/36/36?gravity=center"
+                  alt="channelName"
+                />
+              </a>
+              <div class="videos__details">
+                <a href="#" class="videos__details__title">영상 제목</a>
+                <a href="#" class="videos__details__channelName">채널 이름</a>
+                <div class="videos__details__metadata">
+                  <span>조회수 12만회</span>
+                  •
+                  <span>1주일 전</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
